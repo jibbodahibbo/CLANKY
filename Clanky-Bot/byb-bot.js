@@ -11,26 +11,6 @@ const players = require('./players.js');
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
-var dns = require('dns');
-var w3 = dns.lookup('fatcow.com', function (err, addresses, family) {
-  console.log(addresses);
-});
-
-const sequelize = new Sequelize('byb_scheduler', 'jibbodahibbo', 'Clanky123!', {
-	host: 'snailmemescom.fatcowmysql.com',
-	dialect: 'mysql',
-	port:'3306'
-});
-
-
-sequelize.sync().then(function() {
-    console.log('connected to database')
-}).catch(function(err) {
-    console.log(err)
-});
-
-
-
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
@@ -60,4 +40,4 @@ client.on('message', message => {
 	}
 });
 
-client.login(token);
+client.login(process.env.BOT_TOKEN);
