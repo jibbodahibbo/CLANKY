@@ -2,16 +2,15 @@
   "name": "BYB_BOT",
   "version": "1.0.0",
   "description": "",
-  "main":"byb-bot.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node byb-bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.2.0",
-    "request": "2.81.0"
     "eslint": "^7.4.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
